@@ -1,0 +1,240 @@
+.con{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #007bff, #00d4ff); 
+  height: 350px;
+  width: 1400px;
+  margin-left: 40px;
+  border-radius: 0px 80px 0px 80px;
+  background-image: url('/banner-bg.png');
+  color: #55d7f1;
+  
+}
+h1{
+  margin-top: 50px;
+  text-align: center;
+}
+h1:hover{
+  text-decoration: underline;
+  text-decoration-color: #00d4ff;
+}
+
+.mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+  margin-top: 50px;
+}
+
+.mid1 {
+  position: relative;
+  text-align: center;
+  height: 230px;
+  width: 250px;
+  padding: 10px;
+  border-radius: 15px; /* Rounded corners for the content box */
+  background: black; /* Initial background color */
+  opacity: 0; /* Start invisible */
+  transform: translateY(50px); /* Start slightly below */
+  animation: hop 1s ease-out forwards;
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.mid1:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.mid1:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.mid1:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.mid1:hover {
+  background: #000; /* Change background to black on hover */
+  color: white; /* Optional: Change text color for better contrast */
+}
+
+.mid1::before {
+  content: '';
+  position: absolute;
+  top: -4px; /* Adjust to make the border appear outside the element */
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 15px; /* Match the rounded corners */
+  background: linear-gradient(135deg, #007bff, #00d4ff); /* Gradient border */
+  z-index: -1; /* Ensure the border appears behind the content */
+  pointer-events: none; /* Allow hover to pass through ::before */
+}
+
+.mid1 span {
+  font-size: 40px;
+}
+
+.mid1 h3 {
+  font-size: 17px;
+  margin-top: 17px;
+}
+
+.mid1 h3:hover {
+  text-decoration: underline;
+  text-decoration-color: #00d4ff;
+}
+
+.mid1 p {
+  margin-top: 15px;
+  /* font-size: 14px; */
+}
+
+/* Keyframes for the hopping animation */
+@keyframes hop {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-20px) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.testimonial{
+  text-align: center;
+}
+.two{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 180px;
+}
+.test1 {
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: rgba(180, 130, 255, 0.2); /* Light purple with transparency */
+  backdrop-filter: blur(5px); /* Optional: Adds frosted glass effect */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Light white shadow */
+  padding: 20px; /* Spacing inside the div */
+  color: #ffffff; /* White text for contrast */
+  width: 400px;
+  margin-top: 30px;
+}
+
+.name{
+  font-size: 15px;
+}
+.feedback{
+  font-style: italic;
+}
+.title{
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+/* Footer.css */
+
+.footer {
+  background: linear-gradient(135deg, #040404, #232b30);
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  opacity: 0.8;
+}
+
+.footer-copyright {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.image{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 100px;
+  margin-top: 50px;
+}
+.img1{
+  width: 300px;
+  height: 280px;
+  border: 1px solid white;
+  border-radius: 10px;
+
+}
+.img1 img {
+  width: 100%; /* Makes the image fill the container's width */
+  height: 100%; /* Makes the image fill the container's height */
+  object-fit: cover; /* Ensures the image fits within the div without distortion */
+  border-radius: 10px; /* Optional: Matches border-radius if the container has it */
+}
+
+.about {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5), /* Top: Black gradient with 50% opacity */
+      rgba(0, 0, 0, 0.5)  /* Bottom: Black gradient with 50% opacity */
+    ),
+    url("https://t4.ftcdn.net/jpg/08/80/09/99/360_F_880099928_wKHSiojaiHMN42Ubvezuq4jlkBMtkm0d.jpg");
+  background-size: cover; /* Ensures the image covers the div */
+  background-position: center; /* Centers the background image */
+  padding: 10px;
+  height: 200px;
+  margin-top: 40px;
+  text-align: center;
+  color: white; /* Ensures text color is readable */
+}
+
+.head{
+  color: #edcef8;
+}
+
+
+input{
+  padding: 10px;
+  border: none;
+  height: 30px;
+  width: 280px;
+}
+
